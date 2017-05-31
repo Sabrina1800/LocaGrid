@@ -6,11 +6,12 @@
 </div>
 <br>
 
-<div class="actions topSpacer">
+<div class="actions topSpacer" style="font-family: Josefin Sans; font-size: 1.5em;text-align: center;">
   <%= link_to "Login with Instagram", Instagram.authorize_url(redirect_uri: ENV['REDIRECT_URI']) %>
 </div>
 
-<br>
+<!-- Original Input -->
+<!-- <br>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <div class="field topSpacer">
   <%= f.label :email %><br />
@@ -21,15 +22,34 @@
   <%= f.label :password %><br />
   <%= f.password_field :password, autocomplete: "off" %>
 </div>
+<br> -->
 
+<!-- Input Effect -->
+<div id="input_effect">
+  <span class="input input--haruki">
+    <input class="input__field input__field--haruki" type="text" id="input-1" style="border: none;" />
+    <label class="input__label input__label--haruki" for="input-1">
+      <span class="input__label-content input__label-content--haruki" style="font-family: Josefin Sans; font-size: 1.5em;">Email</span>
+    </label>
+  </span>
+  <br>
+  <span class="input input--haruki">
+    <input class="input__field input__field--haruki" type="text" id="input-1" style="border: none;"/>
+    <label class="input__label input__label--haruki" for="input-1">
+      <span class="input__label-content input__label-content--haruki" style="font-family: Josefin Sans; font-size: 1.5em;">Password</span>
+    </label>
+  </span> <br><br>
+</div>
+
+<br>
 <% if devise_mapping.rememberable? -%>
-<div class="field">
+<div class="field" style=" margin-left:22%; font-family: Josefin Sans; font-size: 1.5em; display: flex;">
   <%= f.check_box :remember_me %>
   <%= f.label :remember_me %>
 </div>
 <% end -%>
 
-<div class="actions topSpacer">
+<div class="actions topSpacer" style="width: 10%; margin-left:22%; font-family: Josefin Sans; font-size: 1em;">
   <%= f.submit "Log in" %>
 </div>
 <% end %>

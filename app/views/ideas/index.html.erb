@@ -15,8 +15,8 @@
 <% end %>
 
 <div class="landingPageHeader">
-  <h1>Your local artists</h1>
-  <h5>Wellington, New Zealand</h5>
+  <h1 style="font-size:5em">Your local artists</h1>
+  <h3 style="font-family: Josefin Sans; font-size: 2em">New Zealand</h5>
   <br>
   <% if user_signed_in? %>
   <div style="text-align: center; background-color: #e7e7e7; color: black; padding: 15px; margin-bottom: 50px;">
@@ -26,6 +26,7 @@
   <br>
 </div>
 
+<!-- Direction-Aware Hover Effect -->
 <div class="gallery">
   <% @ideas.each do |idea| %>
   <div class="artwork">
